@@ -48,3 +48,20 @@ If the contestant initially picks a donkey (2 of 3 doors), the contestant **_wil
 So, by using the strategy to always make the switch, winning or losing **only** depends on whether the contestant has initially chosen a donkey ($\frac{2}{3}$ probability) or the prize ($\frac{1}{3}$ probability).
 
 The fact that the host subsequently reveals a donkey behind one of the unchosen doors changes nothing about the initial probability.
+
+### 2. Bayes' Theorem and Conditional Probability
+
+**Conditional Probability** is a measure of the probability that an event occurs, given that another event has also occurred. This can be calculated using the formula:
+
+<div align='center' style='font-size: 1.5em'>
+
+$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$
+
+</div>
+
+where:
+
+- $P(A \mid B)$ is the probability of event $A$ occurring given that event $B$ has occurred.
+- $P(A \cap B)$ is the probability of both $A$ and $B$ occurring.
+- $P(B)$ is the probability of event $B$ occurring.
+- $P(B)$ is assumed to **not** be zero, as division by zero is undefined.
