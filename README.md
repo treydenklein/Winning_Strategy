@@ -4,11 +4,11 @@ The Monty Hall Problem is a famous probability puzzle named after Monty Hall, th
 
 **1.** You are a contestant on a game show, and you are presented with three doors 🚪🚪🚪.
 
-**2.** Behind one of the doors is a prize (like a car 🚗), and behind the other two are "zonks" (like donkeys).
+**2.** Behind one of the doors is a prize (like a car 🚗), and behind the other two are "zonks" (like donkeys 🫏).
 
 **3.** You choose one of the doors, let's say Door 1.
 
-**4.** The host, who knows where the prize is, then opens another door, let's say Door 3, which reveals a zonk (a donkey 🫏).
+**4.** The host, who knows where the prize is, then opens another door, let's say Door 3, which reveals a zonk (a donkey).
 
 **5.** Now, you are given a choice: stick with your original choice (Door 1), or switch to the remaining unopened door (Door 2).
 
