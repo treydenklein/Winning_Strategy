@@ -237,7 +237,124 @@ df.to_csv(r"[file path]\csv_files\stay_strategy_data.csv", index=False)
 
 ```
 
+#### Visualizing the Data
+
+```python
+# Import libraries
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker  # Import ticker module
+
+# Read CSV files into DataFrames
+swap_strategy_df = pd.read_csv(
+    r"C:\Users\treyd\Projects\Data_Analytics\Data_Analysis_Portfolio_Projects\Winning_Strategy\csv_files\swap_strategy_data.csv"
+)
+stay_strategy_df = pd.read_csv(
+    r"C:\Users\treyd\Projects\Data_Analytics\Data_Analysis_Portfolio_Projects\Winning_Strategy\csv_files\stay_strategy_data.csv"
+)
+
+# Extract iteration and win percentage values from swap strategy data
+swap_iterations = swap_strategy_df["iteration"]
+swap_win_percentages = round(swap_strategy_df["proportion_of_wins"] * 100, 3)
+
+# Extract iteration and win percentage values from stay strategy data
+stay_iterations = stay_strategy_df["iteration"]
+stay_win_percentages = round(stay_strategy_df["proportion_of_wins"] * 100, 3)
+
+# Create plot
+plt.style.use("dark_background")  # Set plot style to dark mode
+plt.figure(figsize=(10, 6))
+plt.ylim(0, 100)  # Set y-axis range
+
+# Plot data
+plt.plot(
+    swap_iterations,
+    swap_win_percentages,
+    color="skyblue",
+    label="Strategy: Accept Offer to Swap Doors",
+)
+
+plt.plot(
+    stay_iterations,
+    stay_win_percentages,
+    color="salmon",
+    label="Strategy: Stay with Original Choice",
+)
+
+# Add horizontal lines representing the theoretical win probabilities
+plt.axhline(y=66.667, color="gray", linestyle="--")
+plt.axhline(y=33.333, color="gray", linestyle="--")
+
+# Add text labels for plot lines
+plt.text(
+    x=8750,  # x-position
+    y=68.5,  # y-position
+    s="Theoretical Win Probability (66.667%)",  # Text to display
+    color="gray",
+    ha="center",
+    fontsize=9,
+)
+
+plt.text(
+    x=8750,  # x-position
+    y=29,  # y-position
+    s="Theoretical Win Probability (33.333%)",  # Text to display
+    color="gray",
+    ha="center",
+    fontsize=9,
+)
+
+# Add plot titles and labels
+plt.title("Win Probability by Strategy")
+plt.xlabel("Number of Simulations")
+plt.ylabel("Percentage of Wins")
+plt.legend(fontsize=10)
+
+# Set a formatter to include '%' in y-axis ticks
+percent_formatter = ticker.FuncFormatter(lambda x, _: f"{x:.0f}%")
+plt.gca().yaxis.set_major_formatter(percent_formatter)
+
+# Show the plot
+plt.show()
+
+# Note: Saved as "...\assets\win_probability_by_strategy.png"
+```
+
 ![Win Probability by Strategy](assets/win_probability_by_strategy.png)
-_Line graph visualizing the win probability for each strategy from data collected from simulated events_
+_Line graph visualizing the win probability for each strategy from data collected by simulated events_
 
 #### Breakdown of the Results:
+
+Making the Switch:
+
+1. **Overall Success Rate:**
+   - Win Proportion by the End of the Simulation: 66.090%
+   - Theoretical Expected Value: 66.667%
+   - This suggests that the simulation is modeling the Monty Hall Problem accurately
+2. **Fluctuation:**
+   - The proportion of wins fluctuates throughout the simulation
+   - In the initial stages, you can see more significant changes due to a smaller sample size
+   - However, as the number of simulations increases, it converges closer to the theoretical expected value
+   - Typical behavior observed where the effect of statistical variability diminishes with a larger number of trials
+3. **Convergance to Theoretical Expectation:**
+   - As more trials are run, the results converge toward the theoretical expectation of a $\frac{2}{3}$ chance of winning
+   - This is a key point of the Monty Hall Problem: intuitively, many people assume that there's a 50/50 chance of winning, but the switching strategy has a higher probability of success
+
+Sticking with the Original Choice:
+
+1. **Overall Success Rate:**
+   - Win Proportion by the End of the Simulation: 33.750%
+   - Theoretical Expected Value: 33.333%
+2. **Comparison with Switching Strategy:**
+   - According to the theoretical and experimental probabilities found, staying with the original door chosen simply yields a lower success rate
+   - Essentially, switching allows you to "double" your chances of winning
+
+# Conclusion
+
+This exploration of the Monty Hall Problem utilized multiple approaches to demonstrate the statistical advantage of accepting the host's offer, making the switch, and going home with that prize.
+
+### Key Takeaways
+
+- The optimal strategy in a "Let's Make a Deal" scenario is to **always switch** after the host reveals a non-winning door
+- The combination of theoretical and empirical methods confirms the $\frac{2}{3}$ success rate for switching and $\frac{1}{3}$ for staying
+- Understanding the Monty Hall Problem requires a certain grasp of conditional probability and the impact of new information on decision-making
