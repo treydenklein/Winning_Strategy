@@ -31,15 +31,11 @@ Essentially, switching allows you to "double" your chances of winning.
 
 Below are all possible arrangements of having one prize and two donkeys behind three doors, and the result of staying or switching after initially picking Door #1 in each case:
 
-<center>
-
 |  Door #1  |  Door #2  |  Door #3  | Result from Staying | Result from Switching |
 | :-------: | :-------: | :-------: | :-----------------: | :-------------------: |
 |  Donkey   |  Donkey   | **Prize** |     Win Donkey      |     **Win Prize**     |
 |  Donkey   | **Prize** |  Donkey   |     Win Donkey      |     **Win Prize**     |
 | **Prize** |  Donkey   |  Donkey   |    **Win Prize**    |      Win Donkey       |
-
-</center>
 
 A player who sticks with their original choice wins in just one of three equally probable scenarios, while a player who switches wins in two out of three cases.
 
