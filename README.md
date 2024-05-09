@@ -70,13 +70,13 @@ where:
 
 <div align='center'>
 
-$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$, where $P(B) \ne 0$
+$\large{P(A \mid B) = \frac{P(A \cap B)}{P(B)}}$, where $\large{P(B) \ne 0}$
 
-$P(B \mid A) = \frac{P(B \cap A)}{P(A)}$, where $P(A) \ne 0$
+$\large{P(B \mid A) = \frac{P(B \cap A)}{P(A)}}$, where $\large{P(A) \ne 0}$
 
 Then, by equating $P(A \cap B)$ and $P(B \cap A)$ from both equations and rearranging:
 
-$P(A \cap B) = P(A \mid B) * P(B) = P(B \mid A) * P(A)$
+$\large{P(A \cap B) = P(A \mid B) * P(B) = P(B \mid A) * P(A)}$
 
 <p style='font-size: 1.75em'>&darr;</p>
 
