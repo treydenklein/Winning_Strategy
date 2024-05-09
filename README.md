@@ -12,18 +12,18 @@ The Monty Hall Problem is a famous probability puzzle named after Monty Hall, th
 
 **5.** Now, you are given a choice: stick with your original choice (Door 1), or switch to the remaining unopened door (Door 2).
 
-**Now, the question is: what should you do to maximize your chances of winning the prize?**
+**Now, the question is: what should you do to maximize your chances of winning the prize??** 💰
 
 # Solution
 
 The correct answer is that you should **accept the offer and switch doors...**
 
-- Making the switch gives you a **66.667%** chance of winning
-- Sticking with your original choice leaves you with a **33.333%** chance
+- 🔥 Making the switch gives you a **66.667%** chance of winning
+- 👎 Sticking with your original choice leaves you with a **33.333%** chance
 
 Although it might seem counterintuitive at first, the reason behind this solution is that when you switch, you benefit from the information provided by the host's action of opening a door with a zonk.
 
-Essentially, switching allows you to "double" your chances of winning.
+Essentially, switching allows you to "double" your chances of winning 📈
 
 # Explanations
 
