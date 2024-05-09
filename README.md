@@ -53,7 +53,7 @@ The fact that the host subsequently reveals a donkey behind one of the unchosen 
 
 **Conditional Probability** is a measure of the probability that an event occurs, given that another event has also occurred. This can be calculated using the formula:
 
-<div align='center' style='font-size: 2em'>
+<div align='center' style='font-size: 1.5em'>
 
 $P(A \mid B) = \frac{P(A \cap B)}{P(B)}$
 
