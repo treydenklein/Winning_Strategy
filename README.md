@@ -45,6 +45,6 @@ A player who sticks with their original choice wins in just one of three equally
 
 If the contestant initially picks a donkey (2 of 3 doors), the contestant **_will_** win the prize by switching because the other donkey can no longer be picked, as the host had to reveal its location. However, if the contestant initially chooses the prize (1 of 3 doors), they **_will not_** win by switching.
 
-So, by using the strategy to always make the switch, winning or losing **only** depends on whether the contestant has initially chosen a donkey (2/3 probability) or the prize (1/3 probability).
+So, by using the strategy to always make the switch, winning or losing **only** depends on whether the contestant has initially chosen a donkey ($\frac{2}{3}$ probability) or the prize ($\frac{1}{3}$ probability).
 
 The fact that the host subsequently reveals a donkey behind one of the unchosen doors changes nothing about the initial probability.
