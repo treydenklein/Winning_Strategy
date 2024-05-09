@@ -247,10 +247,10 @@ import matplotlib.ticker as ticker  # Import ticker module
 
 # Read CSV files into DataFrames
 swap_strategy_df = pd.read_csv(
-    r"C:\Users\treyd\Projects\Data_Analytics\Data_Analysis_Portfolio_Projects\Winning_Strategy\csv_files\swap_strategy_data.csv"
+    r"[file path]\csv_files\swap_strategy_data.csv"
 )
 stay_strategy_df = pd.read_csv(
-    r"C:\Users\treyd\Projects\Data_Analytics\Data_Analysis_Portfolio_Projects\Winning_Strategy\csv_files\stay_strategy_data.csv"
+    r"[file path]\csv_files\stay_strategy_data.csv"
 )
 
 # Extract iteration and win percentage values from swap strategy data
