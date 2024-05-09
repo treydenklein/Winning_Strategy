@@ -65,3 +65,29 @@ where:
 - $P(A \cap B)$ is the probability of both $A$ and $B$ occurring.
 - $P(B)$ is the probability of event $B$ occurring.
 - $P(B)$ is assumed to **not** be zero, as division by zero is undefined.
+
+**Bayes' Theorem** is a mathematical formula used to determine the conditional probability of events. From the definition of conditional probability, Bayes' Theorem can be derived for events as given below:
+
+<div align='center'>
+
+$P(A \mid B) = \frac{P(A \cap B)}{P(B)}$, where $P(B) \ne 0$
+
+$P(B \mid A) = \frac{P(B \cap A)}{P(A)}$, where $P(A) \ne 0$
+
+Then, by equating $P(A \cap B)$ and $P(B \cap A)$ from both equations and rearranging:
+
+$P(A \cap B) = P(A \mid B) * P(B) = P(B \mid A) * P(A)$
+
+<p style='font-size: 1.75em'>&darr;</p>
+
+$\huge{P(A \mid B) = \frac{P(B \mid A) * P(A)}{P(B)}}$
+
+</div>
+
+where:
+
+- $P(A \mid B)$ is the probability of event $A$ occurring given that event $B$ has occurred.
+- $P(B \mid A)$ is the probability of event $B$ occurring given that event $A$ has occurred.
+- $P(A)$ is the probability of event $A$ occurring.
+- $P(B)$ is the probability of event $B$ occurring.
+- $P(B)$ is assumed to **not** be zero, as division by zero is undefined.
