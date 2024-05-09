@@ -132,3 +132,112 @@ $\Large{P(notA \mid B) = 1 - P(A \mid B) = 1 - \frac{1}{3} = \frac{2}{3}}$
 **Given that there is a donkey behind Door #2, the probability of the prize being behind Door #1 is $\frac{1}{3}$. So, with there being 0 probability of the prize being behind Door #2, the probability of winning by switching to Door #3 is $\frac{2}{3}$.**
 
 **Showing that it is, in fact, in the contestant's favor to accept the host's offer to switch doors.**
+
+### 3. Computer Simulations
+
+#### Simulation Strategy: Accept the Offer to Switch Doors
+
+```python
+# Import libraries
+import pandas as pd
+import numpy as np
+
+# Number of iterations to simulate
+num_iterations = 10000
+
+# Create a list to store the results
+results = []
+
+# Simulation loop
+num_wins = 0
+for iteration in range(1, num_iterations + 1):
+    # Randomly choose a door for the prize
+    prize_door = np.random.randint(1, 4)
+
+    # Contestant's initial choice
+    initial_choice = np.random.randint(1, 4)
+
+    # Donkey door revealed by the host
+    donkey_door = next(door for door in [1, 2, 3] if door != prize_door and door != initial_choice)
+
+    # Contestant's final door after switching
+    final_door = next(door for door in [1, 2, 3] if door != initial_choice and door != donkey_door)
+
+    # Determine if the contestant wins by switching doors
+    # Note: Stored as dtype: Boolean
+    win = final_door == prize_door
+
+    # Increment the number of wins if the contestant wins
+    if win:
+        num_wins += 1
+
+    # Calculate the proportion of wins
+    proportion_of_wins = num_wins / iteration
+
+    # Store the result in the list
+    results.append({
+        "iteration": iteration,
+        "win": win,
+        "proportion_of_wins": proportion_of_wins
+    })
+
+# Convert the list of results to a DataFrame
+df = pd.DataFrame(results)
+
+# Write dataframe to CSV file
+df.to_csv(r"[file path]\csv_files\swap_strategy_data.csv", index=False)
+
+```
+
+#### Simulation Strategy: Stick with Original Choice
+
+```python
+# Import libraries
+import pandas as pd
+import numpy as np
+
+# Number of iterations to simulate
+num_iterations = 10000
+
+# Create a list to store the results
+results = []
+
+# Simulation loop
+num_wins = 0
+for iteration in range(1, num_iterations + 1):
+    # Randomly choose a door for the prize
+    prize_door = np.random.randint(1, 4)
+
+    # Contestant's initial choice
+    initial_choice = np.random.randint(1, 4)
+
+    # Determine if the contestant wins by sticking with their initial choice
+    # Note: Stored as dtype: Boolean
+    win = initial_choice == prize_door
+
+    # Increment the number of wins if the contestant wins
+    if win:
+        num_wins += 1
+
+    # Calculate the proportion of wins
+    proportion_of_wins = num_wins / iteration
+
+    # Store the result in the list
+    results.append({
+        "iteration": iteration,
+        "win": win,
+        "proportion_of_wins": proportion_of_wins
+    })
+
+# Convert the list of results to a DataFrame
+df = pd.DataFrame(results)
+
+# Write dataframe to CSV file
+df.to_csv(r"[file path]\csv_files\stay_strategy_data.csv", index=False)
+
+```
+
+![Win Probability by Strategy](assets/win_probability_by_strategy.png)
+_Line graph visualizing the win probability for each strategy from data collected from simulated events_
+
+#### Breakdown of the Results:
