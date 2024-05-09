@@ -328,8 +328,8 @@ _Line graph visualizing the win probability for each strategy from data collecte
 Making the Switch:
 
 1. **Overall Success Rate:**
-   - Win Proportion by the End of the Simulation: 66.090%
-   - Theoretical Expected Value: 66.667%
+   - Win Proportion by the End of the Simulation: **66.090%**
+   - Theoretical Expected Value: **66.667%**
    - This suggests that the simulation is modeling the Monty Hall Problem accurately
 2. **Fluctuation:**
    - The proportion of wins fluctuates throughout the simulation
@@ -343,8 +343,8 @@ Making the Switch:
 Sticking with the Original Choice:
 
 1. **Overall Success Rate:**
-   - Win Proportion by the End of the Simulation: 33.750%
-   - Theoretical Expected Value: 33.333%
+   - Win Proportion by the End of the Simulation: **33.750%**
+   - Theoretical Expected Value: **33.333%**
 2. **Comparison with Switching Strategy:**
    - According to the theoretical and experimental probabilities found, staying with the original door chosen simply yields a lower success rate
    - Essentially, switching allows you to "double" your chances of winning
