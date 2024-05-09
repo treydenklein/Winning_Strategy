@@ -91,3 +91,44 @@ where:
 - $P(A)$ is the probability of event $A$ occurring.
 - $P(B)$ is the probability of event $B$ occurring.
 - $P(B)$ is assumed to **not** be zero, as division by zero is undefined.
+
+#### Solving the Monty Hall Problem:
+
+- Assume the contestant picks Door #1 and the host subsequently reveals a donkey behind Door #2
+- Let event $A$ be that the prize is behind Door #1
+- Let event $B$ be that the host reveals a donkey using Door #2
+
+Finding $P(A)$ is simple ... there is a $\frac{1}{3}$ chance that the prize is behind Door #1
+
+There are two doors left, each having a $\frac{1}{2}$ chance of being chosen the reveal a donkey - giving us $P(B \mid A)$
+
+Now, finding $P(B)$ can be tricky, so first consider that:
+
+1. The contestant has chosen Door #1
+2. If the prize is behind Door #1, the host will not choose it. So, there are two doors left and they will open Door #2 to reveal a donkey $\frac{1}{2}$ of the time.
+3. If the prize is behind Door #2, the host will always open Door #3, as it is their only option.
+4. If the prize is behind Door #3, the host will reveal a donkey behind Door #2 100% of the time.
+
+Taking these instances into account, $P(B)$ can be illustrated as:
+
+<div align='center'>
+
+$\large{P(B) = (\frac{1}{3} * \frac{1}{2}) + (\frac{1}{3} * 0) + (\frac{1}{3} * 1) = \frac{1}{6} + \frac{1}{3} = \frac{1}{2}}$
+
+</div>
+
+Therefore,
+
+<div align='center'>
+
+$\Large{P(A \mid B) = \frac{\frac{1}{2} * \frac{1}{3}}{\frac{1}{2}} = \frac{1}{3}}$
+
+<p style='font-size: 1.75em'>&darr;</p>
+
+$\Large{P(notA \mid B) = 1 - P(A \mid B) = 1 - \frac{1}{3} = \frac{2}{3}}$
+
+</div>
+
+**Given that there is a donkey behind Door #2, the probability of the prize being behind Door #1 is $\frac{1}{3}$. So, with there being 0 probability of the prize being behind Door #2, the probability of winning by switching to Door #3 is $\frac{2}{3}$.**
+
+**Showing that it is, in fact, in the contestant's favor to accept the host's offer to switch doors.**
