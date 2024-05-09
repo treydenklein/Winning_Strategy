@@ -31,16 +31,16 @@ Essentially, switching allows you to "double" your chances of winning.
 
 Below are all possible arrangements of having one prize and two donkeys behind three doors, and the result of staying or switching after initially picking Door #1 in each case:
 
-| Door #1 | Door #2 | Door #3 | Result from Staying | Result from Switching |
-| :-----: | :-----: | :-----: | :-----------------: | :-------------------: |
-| Donkey  | Donkey  | **Car** |     Win Donkey      |      **Win Car**      |
-| Donkey  | **Car** | Donkey  |     Win Donkey      |      **Win Car**      |
-| **Car** | Donkey  | Donkey  |     **Win Car**     |      Win Donkey       |
+|  Door #1  |  Door #2  |  Door #3  | Result from Staying | Result from Switching |
+| :-------: | :-------: | :-------: | :-----------------: | :-------------------: |
+|  Donkey   |  Donkey   | **Prize** |     Win Donkey      |     **Win Prize**     |
+|  Donkey   | **Prize** |  Donkey   |     Win Donkey      |     **Win Prize**     |
+| **Prize** |  Donkey   |  Donkey   |    **Win Prize**    |      Win Donkey       |
 
 A player who sticks with their original choice wins in just one of three equally probable scenarios, while a player who switches wins in two out of three cases.
 
 If the contestant initially picks a donkey (2 of 3 doors), the contestant **_will_** win the prize by switching because the other donkey can no longer be picked, as the host had to reveal its location. However, if the contestant initially chooses the prize (1 of 3 doors), they **_will not_** win by switching.
 
-So, by using the strategy to always make the switch, winning or losing only depends on whether the contestant has initially chosen a donkey (2/3 probability) or the prize (1/3 probability).
+So, by using the strategy to always make the switch, winning or losing **only** depends on whether the contestant has initially chosen a donkey (2/3 probability) or the prize (1/3 probability).
 
-The fact that the host subsequently reveals a donkey in one of the unchosen doors changes nothing about the initial probability.
+The fact that the host subsequently reveals a donkey behind one of the unchosen doors changes nothing about the initial probability.
